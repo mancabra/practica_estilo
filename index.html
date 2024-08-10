@@ -10,7 +10,7 @@
     <div class="container">
         <div class="formulario">
             <h2>Formulario de Envío de Correo</h2>
-            <form>
+            <form onsubmit=pagar()>
                 <div class="caja">
                     <input id="numero" class="completo" type="text" placeholder="Número de tarjeta" required>
                 </div>
@@ -39,5 +39,27 @@
             </form>
         </div>
     </div>
+    <script> 
+        function pagar(){
+
+            var numero = document.getElementById('numero').value;
+            var fecha = document.getElementById('fecha').value;
+            var codigo = document.getElementById('codigo').value;            
+            const a = numero.length == 16
+            const b = validarFecha(fecha)
+            const c = codigo.length == 3
+
+            if (a && b && c ) {
+                alert("PAGO REALIZADO CORRECTAMENTE")
+            } else {
+                alert("PAGO FALLIDO")
+            }
+        }
+
+        function validarFecha(fecha) {
+                const regex = /^([0][1-9]|1[0-2])\/\d{2}$/;
+                return regex.test(fecha);
+        }
+    </script>
 </body>
 </html>
