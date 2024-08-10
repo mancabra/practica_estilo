@@ -17,3 +17,39 @@
     border-radius: 10px;
     box-shadow: 10px 5px 5px rgb(152, 150, 150);
 }
+.caja{
+    display: grid;
+    place-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.completo{
+    width: 96%;
+    height: 30px;
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.interior{
+    display: flex;
+    width: 100%;
+    padding: 0px;
+}
+
+.medioD{
+    margin: 0;
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.medioI{
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
